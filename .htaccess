@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /tinyfx/
+RewriteCond %{REQUEST_URI} !^/tinyfx/public/
+RewriteRule (.*)$ index.php [L]
