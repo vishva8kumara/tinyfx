@@ -4,16 +4,16 @@ $base_url = "http://localhost/tinyfx/";
 $base_url_public = "http://localhost/tinyfx/public/";
 $public_files_root = "./public/";
 
-$display_errors = false;
-$record_errors = false;
-
 $minify_html = false;
 $compress_html = true;
 
-$disallow_hotlinking = false;
+//$display_errors = false;
+//$record_errors = false;
 
-$minify_icluded_js = false;
-$minify_icluded_css = false;
+//$disallow_hotlinking = false;
+
+//$minify_icluded_js = false;
+//$minify_icluded_css = false;
 
 date_default_timezone_set("Asia/Colombo");
 

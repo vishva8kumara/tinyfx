@@ -107,8 +107,10 @@ function connect_database(){
 	return $db_connection;
 }
 
-function redirect($module, $method = false, $params = false){
+function redirect($module, $method = false, $params = false, $redirect_after = false){
 	global $base_url;
+	if ($redirect_after != false)
+		$_SESSION['REDIRECT_AFTER_SIGNIN'] = $redirect_after;
 	$params_list = "";
 	if ($params)
 		foreach($params as $par)
