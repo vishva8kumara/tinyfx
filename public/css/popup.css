@@ -1,0 +1,6 @@
+div#popup_space{position:absolute;top:0px;left:0px;right:0px;width:100%;height:auto;z-index:400;background-image:url('../images/black50.png');}
+div.popup{margin-left:auto;margin-right:auto;margin-top:60px;margin-bottom:700px;padding:12px;background-color:#FFFFFF;border:1px solid#DDDDDD;border-radius:3px;behavior:url(PIE.htc);}
+div.popup h3{padding:6px 6px 3px 6px;margin:-12px;margin-bottom:12px;background-color:#EEEEEE;overflow:hidden;}
+div.popup form{margin-bottom:0px;}
+div.popup a.close{float:right;display:block;cursor:pointer;height:16px;width:16px;background-image:url('../images/sprite_2.png');background-position:-235px -22px;}
+div.popup a.close:hover{background-position:-218px -22px;}

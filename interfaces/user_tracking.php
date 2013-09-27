@@ -7,6 +7,7 @@ if (!isset($user_id)){
 	else if (isset($_SERVER['HTTP_CLIENT_IP']))
 		$ip = $_SERVER['HTTP_CLIENT_IP'];
 	$ip_address = $ip;
+	//	$ip_address may be used in several other places, so DO NOT move this block to inside the following else block..
 
 	if (isset($_COOKIE['user_id'])){
 		$user_id = $_COOKIE['user_id'];

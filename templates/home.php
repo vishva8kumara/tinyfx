@@ -6,7 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="shortcut icon" href="<?= $base_url_public; ?>fav.ico" />
 		<link rel="stylesheet" href="<?= $base_url_public; ?>css/style.css" media="all" />
+		<link rel="stylesheet" href="<?= $base_url_public; ?>css/flash_messages.css" media="all" />
+		<link rel="stylesheet" href="<?= $base_url_public; ?>css/popup.css" media="all" />
 		<script type="text/javascript" src="<?= $base_url_public; ?>js/ajax.js"></script>
+		<script type="text/javascript" src="<?= $base_url_public; ?>js/pop_up.js"></script>
 	</head>
 	<body>
 		<div class="wrapper_outer">

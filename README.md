@@ -90,14 +90,18 @@ And if you are concerned about the security and access-control of records on tha
 
 $user_id is a global variable set by interfaces/user_tracking.php
 
+Redirect:
 redirect($module, $method, $params, $redirect_after)
 This is a simple function to send an HTTP redirect. Only the first parameter is required.
-Teh fourth parameter $redirect_after is when you want to sign in the user and redirect after sign-in.
+The fourth parameter $redirect_after is when you want to sign in the user and redirect after sign-in.
 This parameter is set to $_SESSION['REDIRECT_AFTER_SIGNIN']
+
+Interfaces
+------
 
 User identification
 ------
-Create a user sign-in experience similar to what Facebook and Google uses, up-to their standards. This is a simple interface you may use to acieve that.
+Create a user sign-in experience similar to what Facebook and Google uses, up-to their standards. This is a simple interface you may use to achieve that.
 Just include 'interfaces/user_tracking.php'; on the top of your module, in all modules where you want to track users.
 It sets a cookie with some random hash with maximum life across all your sub-domains.
 The value of this cookie is available as $user_id global variable. This $user_id is not dependent on any database record. It is actually a Browser ID.
@@ -106,9 +110,12 @@ If you would like to maintain a database table of users who would sign-in, we re
 	login (user_id, browser_id, require_password, active, last_login)
 The codes to auto-log-in a user are commented in the user_tracking.php file. You may figure that out and modify according to your requirement.
 
-When these two tables are set up properly (and the codes un-commented), you can show the user where he has signed-in from, and end sessions.
+I usually include/load this interface to the login-page, home-page and any other landing page.
+Loading this interface may cost at least one database read and reading and setting a cookie
+
+When these two tables are set up properly (and the codes un-commented), you can show the user where he has signed-in from, and end other sessions.
 Let's say one of your users have logged in from a public browser, and he forgot to sign out.
-You can show him all his records on login table, and allow him to set 'login' to 0.
+You can show him all his records on login table, and allow him to set 'login' to 0 for a given login record.
 Even though someone is using his user login on that browser at the moment, that session will be terminated immidiately.
 
 If you have uncommented and modified the above mentioned code block, you will have another public variable $user available for users who has signed-in.
