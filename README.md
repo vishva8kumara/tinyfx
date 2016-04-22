@@ -1,3 +1,7 @@
+<aside class="notice">
+Please refer to [https://github.com/Villvay/veev]https://github.com/Villvay/veev, which is the latest version. This repo is inactive and archied.
+</aside>
+
 tiny(fx)
 ======
 
